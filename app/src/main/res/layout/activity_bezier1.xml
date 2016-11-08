@@ -7,7 +7,7 @@
     android:orientation="vertical"
     tools:context="com.guider.bezierdemo.ActivityBezier1">
 
-    <com.guider.bezierdemo.view.BezierView
+    <com.guider.bezierdemo.view.二阶BezierView
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 

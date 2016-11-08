@@ -15,7 +15,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ActivityBezier1"></activity>
+        <activity android:name=".ActivityBezier1" />
+        <activity android:name=".ActivityBezier2" />
+        <activity android:name=".ActivityBezier3"></activity>
     </application>
 
 </manifest>
