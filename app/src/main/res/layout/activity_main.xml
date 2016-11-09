@@ -56,7 +56,7 @@
         android:id="@+id/button7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="二阶贝塞尔曲线" />
+        android:text="路经贝塞尔曲线2" />
 
     <Button
         android:id="@+id/button8"

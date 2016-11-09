@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    @OnClick({R.id.button1, R.id.button2, R.id.button3, R.id.button4, R.id.button5, R.id.button6, R.id.button7})
+    @OnClick({R.id.button1, R.id.button2, R.id.button3, R.id.button4, R.id.button5, R.id.button6, R.id.button7, R.id.button8, R.id.button9, R.id.button10})
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.button1:
@@ -50,6 +50,17 @@ public class MainActivity extends AppCompatActivity {
 
                 break;
             case R.id.button7:
+                startActivity(new Intent(this, ActivityBezier7.class));
+                break;
+            case R.id.button8:
+                startActivity(new Intent(this, ActivityBezier8.class));
+                break;
+            case R.id.button9:
+                startActivity(new Intent(this, ActivityBezier9.class));
+
+                break;
+            case R.id.button10:
+                startActivity(new Intent(this, ActivityBezier10.class));
                 break;
         }
     }
