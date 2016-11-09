@@ -23,12 +23,13 @@ import com.guider.bezierdemo.util.BezierUtil;
  * Created by apple on 16/11/9.
  */
 
-public class 路径动画BezierView2 extends View implements View.OnClickListener {
+public class 路径动画BezierView2 extends View implements View.OnClickListener, View.OnLongClickListener {
 
     Paint paint;
     Path path1, path2;
     PointF startPoint, endPonit, cPoint1, cPoint2, currentPoint1, currentPoint2;
 
+    private boolean tbue;
     public 路径动画BezierView2(Context context, AttributeSet attrs) {
         this(context, attrs, 0);
     }
@@ -44,6 +45,7 @@ public class 路径动画BezierView2 extends View implements View.OnClickListene
         paint.setStrokeWidth(4);
         paint.setColor(Color.BLUE);
         setOnClickListener(this);
+        setOnLongClickListener(this);
     }
 
     @Override
@@ -108,6 +110,12 @@ public class 路径动画BezierView2 extends View implements View.OnClickListene
         animationSet.start();
     }
 
+    @Override
+    public boolean onLongClick(View v) {
+        tbue = !tbue;
+        return true;
+    }
+
     class BezierEvaluator implements TypeEvaluator<PointF> {
         private PointF cPoint;
 
@@ -117,6 +125,9 @@ public class 路径动画BezierView2 extends View implements View.OnClickListene
 
         @Override
         public PointF evaluate(float fraction, PointF startValue, PointF endValue) {
+            if (tbue){
+                return BezierUtil.CalculateBezierPointForCubic(fraction,startValue,cPoint,new PointF(getWidth(),0),endValue);
+            }
             return BezierUtil.CalculateBezierPointForQuadratic(fraction, startValue, cPoint, endValue);
         }
     }
