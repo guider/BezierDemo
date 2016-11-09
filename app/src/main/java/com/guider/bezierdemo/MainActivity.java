@@ -46,6 +46,8 @@ public class MainActivity extends AppCompatActivity {
 
                 break;
             case R.id.button6:
+                startActivity(new Intent(this, ActvityBezier6.class));
+
                 break;
             case R.id.button7:
                 break;

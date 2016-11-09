@@ -19,7 +19,8 @@
         <activity android:name=".ActivityBezier2" />
         <activity android:name=".ActivityBezier3" />
         <activity android:name=".ActivityBezier4" />
-        <activity android:name=".ActivityBezier5"></activity>
+        <activity android:name=".ActivityBezier5" />
+        <activity android:name=".ActvityBezier6"></activity>
     </application>
 
 </manifest>
